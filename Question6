@@ -1,0 +1,34 @@
+# -----------------------------------------------------------------------------
+# Author: Melissa Murgittroyd
+# Date: May 17th, 2023
+# File name: Murgittroyd_print_function.py
+# Purpose: Lab 7, Question 6
+# contact: murgittm@oregonstate.edu
+
+# Question 6
+# Write a program that asks the user for a positive integer and then prints
+# out that many lines. In the program, write a function that takes a 
+# positive integer n, and the produces n lines of output. The first line 
+# contains one dollar sign, the second two dollar signs, until the last line, 
+# which should have n dollar signs. Hint: What does the expression “$” * 5 do?
+# -----------------------------------------------------------------------------
+
+# hint: What does the expression “$” * 5 do?
+# creates a string that repeats the character $ 5 times. * used for repetition
+# print out the # lines according to the + integer input by user
+
+
+def print_dollar_billz_yall(x):  
+ for i in range(1, x+1):
+  print("$"*i)
+# define function dollarbillzyall which takes positive integer x
+# as the argument, and produces x lines of output using for loop/print. 
+# for each loop iteration, prints string of $ repeated i times, where i is the loop
+# variable (ranging from 1 to x) 
+
+# prompts user to enter the positive integer
+x = int(input("Enter a positive integer here: "))
+
+# print result of function for x input 
+print_dollar_billz_yall(x)
+
