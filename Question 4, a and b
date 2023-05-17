@@ -1,0 +1,59 @@
+# -----------------------------------------------------------------------------
+# Author: Melissa Murgittroyd
+# Date: May 17th, 2023
+# File name: Murgittroyd_calendar_leapyear_function.py
+# Purpose: Lab 7, Question 4, part a and b
+# contact: murgittm@oregonstate.edu
+
+# Question 4A
+# Write a program that asks a user for any year, calls the calendar.isleap(year) 
+# function, and then prints out whether or not the year is a leap year.
+# -----------------------------------------------------------------------------
+
+# import the calendar module > functions for working with dates/times 
+import calendar 
+year = int(input("Enter a year here: ")) 
+     # asks user to input a year
+     # convert user input to integer data type
+
+#create if statement to check if the user input year is a leap year
+# use the calendar.isleap function and use the year as the argument
+if calendar.isleap(year):
+  print(year, "is a leap year!")
+else:
+    print(year, "is not a leap year :(")
+# responses: 
+# true= YES is leap
+# false = NO is not leap
+# checked with 2000 = true, 2100 = false and worked as expected 
+#-------------------------------------------------------------------------------
+
+# Question 4B
+# write the same program, but instead of using the calendar.isleap(year)
+# function, write your own function that does the same thing as
+# calendar.isleap(year), i.e. returns the built-in Boolean values True or False
+
+#define my function leap_year, takes the argument YEAR, 
+# which is the year to be analyzed
+def leap_year(year):
+  if year % 4 == 0:           #if statement to check gregorian rules= DIV by 4?
+    if year % 100 == 0:       # if DIV by 100?
+      if year % 400 == 0:     # if DIV by 400?
+        return True           # IF meets all, with no remainder, YES/TRUE
+      else:                   # if FALSE for 1st If, print false
+        return False
+    else: return True         # if false for 2nd IF, print false
+  else: return False          # if false for 3rd if, print false
+
+year = int(input("Enter a year here: ")) 
+     # asks user to input a year
+     # convert user input to integer data type
+
+#create if statement to check if the user input year is a leap year
+# use the calendar.isleap function and use the year as the argument
+if leap_year(year):  #call the leap_year function
+  print(year, "is a leap year!")
+else:
+    print(year, "is not a leap year :(")
+
+
